@@ -65,7 +65,6 @@ namespace GraphGetGroups
             {
                 Console.WriteLine($"    {group.DisplayName}. Created: {group.CreatedDateTime}. Visibility {group.Visibility}");
             }
-
         }
     }
 }

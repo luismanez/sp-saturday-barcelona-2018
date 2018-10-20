@@ -14,7 +14,7 @@ namespace GraphBatchRequest.Authentication
         public static AzureActiveDirectorySettings Initialize()
         {
             return JsonConvert.DeserializeObject<AzureActiveDirectorySettings>(
-                File.ReadAllText(@"C:\Github\sp-saturday-madrid-2018\demos\done\SPSMadrid.GraphDemo\secrets.app2.json"));
+                File.ReadAllText(@"C:\Github\sp-saturday-barcelona-2018\demos\done\SPSBcn.GraphDemo\secrets.app2.json"));
         }
     }
 }
