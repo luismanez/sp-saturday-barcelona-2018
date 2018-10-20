@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-groups-sdk-app-permissions", "01-groups-sdk-app-permissions", "{6BE38F52-150C-4A8D-92C3-29EEE92B7346}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-me-rest-delegated-permissions", "02-me-rest-delegated-permissions", "{077D102E-54D1-4A9D-9267-4F6F56082610}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-batch-rest-delegated-permissions", "03-batch-rest-delegated-permissions", "{A2EC4CCE-C24B-40C9-8693-343224784210}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphGetGroups", "GraphGetGroups\GraphGetGroups.csproj", "{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-common", "00-common", "{77E78B25-6C87-45FF-8C72-913E82CAAD70}"
+	ProjectSection(SolutionItems) = preProject
+		secrets.app1.json = secrets.app1.json
+		secrets.app2.json = secrets.app2.json
+		secrets.sample.json = secrets.sample.json
+		snippets.md = snippets.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphGetMe", "GetMe\GraphGetMe.csproj", "{74930B7B-0A3E-4006-AC52-01C120E45304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphBatchRequest", "GraphBatchRequest\GraphBatchRequest.csproj", "{EF2811CD-25F4-47EB-9104-A56C4E991BB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74930B7B-0A3E-4006-AC52-01C120E45304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74930B7B-0A3E-4006-AC52-01C120E45304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74930B7B-0A3E-4006-AC52-01C120E45304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74930B7B-0A3E-4006-AC52-01C120E45304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF2811CD-25F4-47EB-9104-A56C4E991BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF2811CD-25F4-47EB-9104-A56C4E991BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF2811CD-25F4-47EB-9104-A56C4E991BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF2811CD-25F4-47EB-9104-A56C4E991BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D662442B-DA39-45AD-9A8B-8E9A1EE14BEF} = {6BE38F52-150C-4A8D-92C3-29EEE92B7346}
+		{74930B7B-0A3E-4006-AC52-01C120E45304} = {077D102E-54D1-4A9D-9267-4F6F56082610}
+		{EF2811CD-25F4-47EB-9104-A56C4E991BB6} = {A2EC4CCE-C24B-40C9-8693-343224784210}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DC9E2E7-9B43-4C55-AC2A-08881485A477}
+	EndGlobalSection
+EndGlobal

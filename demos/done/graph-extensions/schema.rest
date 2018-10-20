@@ -1,0 +1,40 @@
+GET https://graph.microsoft.com/v1.0/schemaExtensions HTTP/1.1
+
+POST https://graph.microsoft.com/v1.0/schemaExtensions HTTP/1.1
+content-type: application/json
+{
+    "id": "inheritscloud_SocialData",
+    "description": "Adding social networks data to users",
+    "owner": "ac638f16-63c2-462b-95a4-16f8a60b0628",
+    "targetTypes": [
+        "User"
+    ],
+    "properties": [
+        {
+            "name": "twitter", "type": "String"
+        },
+        {
+            "name": "facebook", "type": "String"
+        },
+        {
+            "name": "lastEvent", "type": "DateTime"
+        },
+        {
+            "name": "isSpeaker", "type": "Boolean"
+        }
+    ]
+}
+
+PATCH https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8 HTTP/1.1
+{
+    "inheritscloud_SocialData": {
+        "twitter": "@lizard",
+        "facebook": "facebook.com/lizard",
+        "lastEvent": "2018-06-09T10:30:00",
+        "isSpeaker": true
+    }
+}
+
+GET https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8?$select=displayName,inheritscloud_SocialData  HTTP/1.1
+
+GET https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8?$select=displayName,inheritscloud_SocialData&$filter(inheritscloud_SocialData/isSpeaker eq $true) HTTP/1.1

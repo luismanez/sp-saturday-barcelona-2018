@@ -1,0 +1,12 @@
+GET https://graph.microsoft.com/v1.0/groups?$select=displayName,id HTTP/1.1
+
+POST https://graph.microsoft.com/v1.0/groups/273fda66-9b5a-4233-b4f5-2fd40c4fc9e3/extensions HTTP/1.1
+content-type: application/json
+{
+    "@odata.type": "microsoft.graph.openTypeExtension",
+    "extensionName": "com.inheritscloud.businessCategory",
+    "businessUnit": "Marketing",
+    "client": "Marvel"
+}
+
+GET https://graph.microsoft.com/v1.0/groups?$select=displayName&$expand=extensions HTTP/1.1
