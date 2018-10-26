@@ -1,3 +1,5 @@
+DELETE https://graph.microsoft.com/v1.0/schemaExtensions/inheritscloud_SocialData HTTP/1.1
+
 GET https://graph.microsoft.com/v1.0/schemaExtensions HTTP/1.1
 
 POST https://graph.microsoft.com/v1.0/schemaExtensions HTTP/1.1
@@ -25,16 +27,26 @@ content-type: application/json
     ]
 }
 
-PATCH https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8 HTTP/1.1
+PATCH https://graph.microsoft.com/v1.0/users/42ff1ed5-11d4-4e79-95bf-8df97611dfe1 HTTP/1.1
 {
     "inheritscloud_SocialData": {
-        "twitter": "@lizard",
-        "facebook": "facebook.com/lizard",
+        "twitter": "@tioben",
+        "facebook": "facebook.com/tioben",
         "lastEvent": "2018-06-09T10:30:00",
         "isSpeaker": true
     }
 }
 
+PATCH https://graph.microsoft.com/v1.0/users/dfcdcaa2-55b7-4efb-9ae1-5fd176f08b38 HTTP/1.1
+{
+    "inheritscloud_SocialData": {
+        "twitter": "@spiderman",
+        "facebook": "facebook.com/spiderman",
+        "lastEvent": "2018-06-09T10:30:00",
+        "isSpeaker": false
+    }
+}
+
 GET https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8?$select=displayName,inheritscloud_SocialData  HTTP/1.1
 
-GET https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8?$select=displayName,inheritscloud_SocialData&$filter(inheritscloud_SocialData/isSpeaker eq $true) HTTP/1.1
+GET https://graph.microsoft.com/beta/users/?$select=displayName,inheritscloud_SocialData&$filter=inheritscloud_SocialData/twitter eq '@spiderman'  HTTP/1.1

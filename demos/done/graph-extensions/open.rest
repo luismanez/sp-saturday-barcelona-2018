@@ -1,12 +1,13 @@
-GET https://graph.microsoft.com/v1.0/groups?$select=displayName,id HTTP/1.1
+GET https://graph.microsoft.com/v1.0/groups/43f83260-f4e4-4389-8bdf-46a372aaf8b2/extensions HTTP/1.1
 
-POST https://graph.microsoft.com/v1.0/groups/273fda66-9b5a-4233-b4f5-2fd40c4fc9e3/extensions HTTP/1.1
+POST https://graph.microsoft.com/v1.0/groups/43f83260-f4e4-4389-8bdf-46a372aaf8b2/extensions HTTP/1.1
 content-type: application/json
 {
     "@odata.type": "microsoft.graph.openTypeExtension",
-    "extensionName": "com.inheritscloud.businessCategory",
+    "extensionName": "com.inheritscloud.businessExtension",
     "businessUnit": "Marketing",
-    "client": "Marvel"
+    "client": "Marvel",
+    "tags": ["gold", "marvel"]
 }
 
 GET https://graph.microsoft.com/v1.0/groups?$select=displayName&$expand=extensions HTTP/1.1
