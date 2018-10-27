@@ -47,6 +47,4 @@ PATCH https://graph.microsoft.com/v1.0/users/dfcdcaa2-55b7-4efb-9ae1-5fd176f08b3
     }
 }
 
-GET https://graph.microsoft.com/v1.0/users/e1c165b7-115c-4d26-8760-66807987bfb8?$select=displayName,inheritscloud_SocialData  HTTP/1.1
-
 GET https://graph.microsoft.com/beta/users/?$select=displayName,inheritscloud_SocialData&$filter=inheritscloud_SocialData/twitter eq '@spiderman'  HTTP/1.1
